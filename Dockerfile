@@ -4,7 +4,7 @@ USER 0
 
 COPY models/breast_cancer/requirements.txt requirements.txt
 
-RUN apt update && apt install -y --no-install-recommends gcc && \
+RUN --mount=type=cache,target=/cache \
     pip install -r requirements.txt --no-cache-dir
 
 WORKDIR /app
