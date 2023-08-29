@@ -5,7 +5,6 @@ USER 0
 COPY models/breast_cancer/requirements.txt requirements.txt
 
 RUN apt update && apt install -y --no-install-recommends gcc && \
-    pip install --upgrade pip setuptools wheel && \
     pip install -r requirements.txt --no-cache-dir
 
 WORKDIR /app
