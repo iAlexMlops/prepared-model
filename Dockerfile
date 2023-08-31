@@ -4,8 +4,7 @@ USER 0
 
 COPY models/breast_cancer/requirements.txt requirements.txt
 
-RUN --mount=type=cache,target=/cache \
-    pip install -r requirements.txt --no-cache-dir
+RUN pip install -r requirements.txt
 
 WORKDIR /app
 
